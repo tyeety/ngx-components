@@ -1,0 +1,99 @@
+.items {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  overflow: auto;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+
+  & > * {
+    scroll-snap-align: start;
+  }
+}
+
+.d {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    max-width: var(--mx);
+    margin: 20px auto;
+
+    .indicators {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+
+      .indicator {
+        width: 15px;
+        height: 15px;
+        background: white;
+        border-radius: 10px;
+        transition-duration: 0.2s;
+        outline: none;
+
+        &.active {
+          width: 30px;
+          background-color: var(--c1);
+        }
+      }
+    }
+
+    .timer {
+      width: 100%;
+      max-width: 200px;
+      height: 1px;
+      background-color: var(--c1);
+      margin-top: 10px;
+      position: relative;
+
+      &:before {
+        content: " ";
+        width: 0%;
+        height: 5px;
+        position: absolute;
+        top: 0;
+        background-color: gray;
+        border-radius: 5px;
+        transform: translateY(-50%);
+        transition-timing-function: linear;
+      }
+
+      &.full:before {
+        transition-duration: var(--interval);
+        width: 100%;
+      }
+    }
+  }
+
+  .nav {
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid var(--c1);
+    border-radius: 10px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &.prev {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.hidescroll::-webkit-scrollbar {
+  display: none;
+}
