@@ -69,7 +69,8 @@
               "projects/demo/src/styles.scss"
             ],
             "scripts": [],
-            "deployUrl": "https://tyeety.github.io/ngx-components/"
+            "baseHref": "ngx-components",
+            "deployUrl": "https://tyeety.github.io/"
           },
           "configurations": {
             "production": {
