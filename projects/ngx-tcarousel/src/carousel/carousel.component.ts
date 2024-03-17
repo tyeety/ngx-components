@@ -18,6 +18,8 @@ export class NgxTCarouselComponent implements OnChanges {
   @Input('itemCount') itemCount: number = 0;
   @Input('freezePeriod') freezePeriod: number = 5000;
   @Input('showHandles') showHandles: boolean = false;
+  @Input('mainColor') mainColor: string = '#C7A867';
+  @Input('secondColor') secondColor: string = 'black';
 
   @ViewChild('itemsElement') itemsElement?: ElementRef;
 

@@ -1,0 +1,29 @@
+<div class="container">
+  <ngx-tcarousel class="usein"
+                 [itemCount]="2"
+                 [itemsPerPage]="1"
+                 [interval]="0"
+                 [gap]="0"
+                 [freezePeriod]="5000"
+                 [showHandles]="true"
+                 [mainColor]="'#C7A867'"
+                 [secondColor]="'black'">
+    <figure class="slide">
+      <picture>
+        <source srcset="/assets/s1.avif" type="image/avif" />
+        <source srcset="/assets/s1.webp" type="image/webp" />
+        <img ngSrc="/assets/s1.jpg" fill />
+      </picture>
+      <figcaption>Slide 1</figcaption>
+    </figure>
+
+    <figure class="slide">
+      <picture>
+        <source srcset="/assets/tv.avif" type="image/avif" />
+        <source srcset="/assets/tv.webp" type="image/webp" />
+        <img ngSrc="/assets/tv.jpg" fill />
+      </picture>
+      <figcaption>Slide 2</figcaption>
+    </figure>
+  </ngx-tcarousel>
+</div>
