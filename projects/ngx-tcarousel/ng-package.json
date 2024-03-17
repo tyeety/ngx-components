@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/ngx-carousel",
+  "dest": "../../dist/ngx-tcarousel",
   "lib": {
     "entryFile": "src/public-api.ts"
   }

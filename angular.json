@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-carousel": {
+    "ngx-tcarousel": {
       "projectType": "library",
-      "root": "projects/ngx-carousel",
-      "sourceRoot": "projects/ngx-carousel/src",
+      "root": "projects/ngx-tcarousel",
+      "sourceRoot": "projects/ngx-tcarousel/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ngx-carousel/ng-package.json"
+            "project": "projects/ngx-tcarousel/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngx-carousel/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-tcarousel/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ngx-carousel/tsconfig.lib.json"
+              "tsConfig": "projects/ngx-tcarousel/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,7 +27,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/ngx-carousel/tsconfig.spec.json",
+            "tsConfig": "projects/ngx-tcarousel/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"

@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Input, OnChanges, ViewChild, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'ngx-carousel',
+  selector: 'ngx-tcarousel',
   standalone: true,
   imports: [
     CommonModule
@@ -11,7 +11,7 @@ import { Component, ElementRef, Input, OnChanges, ViewChild, ViewEncapsulation }
   styleUrl: './carousel.component.scss',
   encapsulation: ViewEncapsulation.None
 })
-export class NgxCarouselComponent implements OnChanges {
+export class NgxTCarouselComponent implements OnChanges {
   @Input('itemsPerPage') itemsPerPage: number = 1;
   @Input('interval') interval: number = 0;
   @Input('gap') gap: number = 0;

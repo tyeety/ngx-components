@@ -1,9 +1,9 @@
-Angular Responsive Carousel (ng-carousel)
+Angular Responsive Carousel (ngx-tcarousel)
 =========================================
 
 **Super Light, Easy-to-Use Angular Carousel with RTL Support**
 
-The **Angular Responsive Carousel** (ng-carousel) is a lightweight and flexible carousel component for Angular applications. It’s designed to be simple to integrate, responsive, and compatible with right-to-left (RTL) languages.
+The **Angular Responsive Carousel** (ngx-tcarousel) is a lightweight and flexible carousel component for Angular applications. It’s designed to be simple to integrate, responsive, and compatible with right-to-left (RTL) languages.
 
 Features
 --------
@@ -19,14 +19,14 @@ Installation
 
 1.  Install the package via npm:
     
-    npm install @tyeety/ng-carousel
+    npm install @tyeety/ngx-tcarousel
     
     Replace `@tyeety` with your GitHub username or organization.
     
 2.  Import the `NgxCarouselComponent` in your Angular module or standalone component:
     
         import { Component } from '@angular/core';
-        import { NgxCarouselComponent } from '@tyeety/ng-carousel';
+        import { NgxCarouselComponent } from '@tyeety/ngx-tcarousel';
         
         @Component({
           selector: 'app-carousel-demo',
@@ -39,7 +39,7 @@ Installation
         })
         export class CarouselDemoComponent {
           carouselItems = [
-            { imageUrl: 'assets/slide1.jpg', caption: 'Welcome to ng-carousel!' },
+            { imageUrl: 'assets/slide1.jpg', caption: 'Welcome to ngx-tcarousel!' },
             { imageUrl: 'assets/slide2.jpg', caption: 'Easy to use and customize.' },
             // Add more items as needed
           ];

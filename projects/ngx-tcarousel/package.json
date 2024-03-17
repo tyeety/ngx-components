@@ -1,0 +1,20 @@
+{
+  "name": "ngx-tcarousel",
+  "version": "17.0.0",
+  "peerDependencies": {
+    "@angular/common": "^17.0.0",
+    "@angular/core": "^17.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "keywords": ["Carousel", "Slider", "Angular", "Slider", "Angular 14", "Angular 15", "Angular 16", "Angular 17"],
+  "license": "MIT",
+  "description": "Super Light, Easy-to-Use Angular Carousel with RTL Support",
+  "author": "Arash Ghasemi Rad",
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
