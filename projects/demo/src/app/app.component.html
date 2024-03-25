@@ -1,4 +1,7 @@
-<div class="container">
+<h1>ngx-tcarousel</h1>
+
+<div class="container s1">
+  <h2>Simple example</h2>
   <ngx-tcarousel class="usein"
                  [itemCount]="2"
                  [itemsPerPage]="1"
@@ -25,5 +28,50 @@
       </picture>
       <figcaption>Slide 2</figcaption>
     </figure>
+  </ngx-tcarousel>
+</div>
+
+<div class="container s2">
+  <h2>Shadow mode</h2>
+  <ngx-tcarousel class="usein"
+                 [itemCount]="4"
+                 [itemsPerPage]="1"
+                 [interval]="0"
+                 [gap]="20"
+                 [freezePeriod]="5000"
+                 [showHandles]="true"
+                 [mainColor]="'#C7A867'"
+                 [secondColor]="'black'"
+                 [shadowMode]="true"
+                 [startIndex]="1">
+
+    <div class="citem">
+      <picture>
+        <source srcset="./assets/s1.avif" type="image/avif" />
+        <source srcset="./assets/s1.webp" type="image/webp" />
+        <img ngSrc="/assets/s1.jpg" fill />
+      </picture>
+    </div>
+    <div class="citem">
+      <picture>
+        <source srcset="./assets/s1.avif" type="image/avif" />
+        <source srcset="./assets/s1.webp" type="image/webp" />
+        <img ngSrc="/assets/s1.jpg" fill />
+      </picture>
+    </div>
+    <div class="citem">
+      <picture>
+        <source srcset="./assets/s1.avif" type="image/avif" />
+        <source srcset="./assets/s1.webp" type="image/webp" />
+        <img ngSrc="/assets/s1.jpg" fill />
+      </picture>
+    </div>
+    <div class="citem">
+      <picture>
+        <source srcset="./assets/s1.avif" type="image/avif" />
+        <source srcset="./assets/s1.webp" type="image/webp" />
+        <img ngSrc="/assets/s1.jpg" fill />
+      </picture>
+    </div>
   </ngx-tcarousel>
 </div>

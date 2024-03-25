@@ -7,7 +7,7 @@
   scroll-behavior: smooth;
 
   & > * {
-    scroll-snap-align: start;
+    scroll-snap-align: center;
   }
 }
 
@@ -45,6 +45,7 @@
         &.active {
           width: 30px;
           background-color: var(--mainColor);
+          border: none;
         }
       }
     }

@@ -1,10 +1,50 @@
 .container {
   width: 700px;
   margin: auto;
+  margin-bottom: 100px;
 }
 
-.slide {
-  flex: 0 0 700px;
-  height: 400px;
-  position: relative;
+.s1 {
+  .slide {
+    flex: 0 0 700px;
+    height: 400px;
+    position: relative;
+  }
+}
+
+
+.s2 {
+  padding-top: 60px;
+
+  ngx-tcarousel {
+    width: min(var(--zone), 100vw);
+    display: block;
+    margin: auto;
+
+    .citem {
+      flex: 0 0 50%;
+      transform: translateX(50%);
+      transition-duration: .5s;
+
+      &:last-child {
+        margin-right: 50%;
+      }
+
+      &:not(.active_tcar_item) {
+        filter: brightness(0.3);
+      }
+
+      picture {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 20 / 9;
+        display: block;
+
+        img {
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
 }
