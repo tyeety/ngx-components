@@ -14,6 +14,10 @@ Features
 *   **Easy Integration**: Simple API for adding a carousel to your project.
 *   **Customizable**: Customize styles, navigation, and behavior.
 
+Demo
+----
+[Demo](https://tyeety.github.io/ngx-components/)
+
 Installation
 ------------
 
@@ -33,14 +37,17 @@ Installation
           template: `
             <ngx-carousel [itemCount]="carouselItems.length">
               <!-- Add your custom content here -->
-              <div *ngFor="let item of carouselItems"></div>
+              <div *ngFor="let item of carouselItems" class="custom-class">
+                Title: {{item.title}}
+                <img [src]="item.imageUrl" />
+              </div>
             </ngx-carousel>
           `,
         })
         export class CarouselDemoComponent {
           carouselItems = [
-            { imageUrl: 'assets/slide1.jpg', caption: 'Welcome to ngx-tcarousel!' },
-            { imageUrl: 'assets/slide2.jpg', caption: 'Easy to use and customize.' },
+            { imageUrl: 'assets/slide1.jpg', title: 'Welcome to ngx-tcarousel!' },
+            { imageUrl: 'assets/slide2.jpg', title: 'Easy to use and customize.' },
             // Add more items as needed
           ];
         }
@@ -58,11 +65,11 @@ Inputs
 *   `freezePeriod`: Optional (default: 5000). If the user changes a slide, auto slide freezes for this period (in milliseconds).
 *   `showHandles`: Optional (default: false). Visibility of next and previous buttons.
 *   `showIndicators`: Optional (default: false). Visibility of indicators.
-*   `mainColor`: Optional (default: false). Color of active indicator, timer and nav buttons borders.
-*   `secondColor`: Optional (default: false). Color of inactive indicators borders.
+*   `mainColor`: Optional (default: '#C7A867'). Color of **active indicator**, **timer** and **nav buttons borders**.
+*   `secondColor`: Optional (default: 'black'). Color of **inactive indicators borders**.
 *   `shadowMode`: Optional (default: false). Enable it, if you want to view inactive slides partialy.
-*   `shadowDivisor`: Optional (default: false). Divide scroll movement.
-*   `startIndex`: Optional (default: false). Start index!
+*   `shadowDivisor`: Optional (default: 2). Divide scroll movement.
+*   `startIndex`: Optional (default: 0). Start index!
 
 Styling
 -------

@@ -7,7 +7,7 @@
   scroll-behavior: smooth;
 
   & > * {
-    scroll-snap-align: center;
+    scroll-snap-align: var(--scroll_snap_align);
   }
 }
 
@@ -16,6 +16,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  max-width: 100%;
 
   .carousel {
     display: flex;
@@ -24,6 +25,8 @@
     align-items: center;
     justify-content: center;
     margin: 20px auto;
+    flex: 1 1 auto;
+    overflow: hidden;
 
     .indicators {
       display: flex;
@@ -41,11 +44,13 @@
         transition-duration: 0.2s;
         outline: none;
         border-color: var(--secondcolor);
+        cursor: pointer;
 
         &.active {
           width: 30px;
           background-color: var(--mainColor);
           border: none;
+          cursor: initial;
         }
       }
     }
@@ -88,6 +93,8 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    flex: 0 0 45px;
+    cursor: pointer;
 
     &.prev {
       transform: rotateY(180deg);
@@ -97,4 +104,10 @@
 
 .hidescroll::-webkit-scrollbar {
   display: none;
+}
+
+:dir(rtl) {
+  .flip {
+    transform: rotateY(180deg);
+  }
 }

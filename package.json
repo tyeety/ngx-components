@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng build ngx-tcarousel && ng build demo && ng serve demo --port 61005",
+    "build": "ng build ngx-tcarousel",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

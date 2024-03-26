@@ -32,6 +32,100 @@
 </div>
 
 <div class="container s2">
+  <h2>Multiple items per page with timer</h2>
+  <ngx-tcarousel class="usein"
+                 [itemCount]="9"
+                 [itemsPerPage]="3"
+                 [interval]="5000"
+                 [gap]="20"
+                 [freezePeriod]="5000"
+                 [showHandles]="false"
+                 [mainColor]="'#C7A867'"
+                 [secondColor]="'black'">
+    <figure class="slide">
+      <picture>
+        <source srcset="./assets/s1.avif" type="image/avif" />
+        <source srcset="./assets/s1.webp" type="image/webp" />
+        <img ngSrc="/assets/s1.jpg" fill />
+      </picture>
+      <figcaption>Slide 1</figcaption>
+    </figure>
+
+    <figure class="slide">
+      <picture>
+        <source srcset="./assets/tv.avif" type="image/avif" />
+        <source srcset="./assets/tv.webp" type="image/webp" />
+        <img ngSrc="./assets/tv.jpg" fill />
+      </picture>
+      <figcaption>Slide 2</figcaption>
+    </figure>
+
+    <figure class="slide">
+      <picture>
+        <source srcset="./assets/tv.avif" type="image/avif" />
+        <source srcset="./assets/tv.webp" type="image/webp" />
+        <img ngSrc="./assets/s1.jpg" fill />
+      </picture>
+      <figcaption>Slide 3</figcaption>
+    </figure>
+
+    <figure class="slide">
+      <picture>
+        <source srcset="./assets/tv.avif" type="image/avif" />
+        <source srcset="./assets/tv.webp" type="image/webp" />
+        <img ngSrc="./assets/tv.jpg" fill />
+      </picture>
+      <figcaption>Slide 4</figcaption>
+    </figure>
+
+    <figure class="slide">
+      <picture>
+        <source srcset="./assets/tv.avif" type="image/avif" />
+        <source srcset="./assets/tv.webp" type="image/webp" />
+        <img ngSrc="./assets/s1.jpg" fill />
+      </picture>
+      <figcaption>Slide 5</figcaption>
+    </figure>
+
+    <figure class="slide">
+      <picture>
+        <source srcset="./assets/tv.avif" type="image/avif" />
+        <source srcset="./assets/tv.webp" type="image/webp" />
+        <img ngSrc="./assets/tv.jpg" fill />
+      </picture>
+      <figcaption>Slide 6</figcaption>
+    </figure>
+
+    <figure class="slide">
+      <picture>
+        <source srcset="./assets/tv.avif" type="image/avif" />
+        <source srcset="./assets/tv.webp" type="image/webp" />
+        <img ngSrc="./assets/s1.jpg" fill />
+      </picture>
+      <figcaption>Slide 7</figcaption>
+    </figure>
+
+    <figure class="slide">
+      <picture>
+        <source srcset="./assets/tv.avif" type="image/avif" />
+        <source srcset="./assets/tv.webp" type="image/webp" />
+        <img ngSrc="./assets/tv.jpg" fill />
+      </picture>
+      <figcaption>Slide 6</figcaption>
+    </figure>
+
+    <figure class="slide">
+      <picture>
+        <source srcset="./assets/tv.avif" type="image/avif" />
+        <source srcset="./assets/tv.webp" type="image/webp" />
+        <img ngSrc="./assets/s1.jpg" fill />
+      </picture>
+      <figcaption>Slide 7</figcaption>
+    </figure>
+  </ngx-tcarousel>
+</div>
+
+<div class="container s3">
   <h2>Shadow mode</h2>
   <ngx-tcarousel class="usein"
                  [itemCount]="4"
