@@ -31,11 +31,69 @@ export class NgxTCarouselComponent implements OnChanges {
   currentItem = 0;
   items: number[] = [];
 
-  ngOnChanges() {
+  viewingVisibilitychange = false;
+  async ngOnChanges() {
     this.items = [...Array(this.itemCount).keys()];
     this.currentItem = this.startIndex;
     this.scrolProduct(this.currentItem, false, true);
     this.autoMove();
+    this.setObserver();
+  }
+
+  stop() {
+    if (this.mv) {
+      clearTimeout(this.mv);
+      this.mv = null;
+      this.timer = false;
+    }
+  }
+
+  start() {
+    if (!this.mv) {
+      this.autoMove();
+    }
+  }
+
+  observer: IntersectionObserver | null = null;
+  setObserver() {
+    if (this.interval > 0) {
+
+      // Visibilitychange
+      if (!this.viewingVisibilitychange) {
+        this.viewingVisibilitychange = true;
+        addEventListener("visibilitychange", _ => {
+          if (document.hidden) {
+            this.stop();
+          } else {
+            this.start();
+          }
+        });
+      }
+
+      // IntersectionObserver
+      if (this.itemsElement) {
+        if (this.observer) {
+          this.observer.unobserve(this.itemsElement.nativeElement);
+          this.observer.disconnect();
+          this.observer = null;
+        }
+        let observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
+          if (entries && entries.length && entries[0] && entries[0].intersectionRatio > 0) {
+            this.start();
+          } else {
+            this.stop();
+          }
+        }, {
+          root: null,
+          threshold: [0, 0.1],
+        });
+        observer.observe(this.itemsElement.nativeElement);
+      } else {
+        setTimeout(() => {
+          this.setObserver();
+        }, 100);
+      }
+    }
   }
 
   sp: any | null = null;
@@ -90,6 +148,7 @@ export class NgxTCarouselComponent implements OnChanges {
     }
     this.timer = false;
     if (this.interval > 0) {
+      // Let browser render timer
       setTimeout(() => {
         this.mv = setTimeout(() => {
           this.scrolProduct(this.currentItem + 1, false);
