@@ -5,7 +5,7 @@
 
   <div class="d" [style.--mainColor]="mainColor" [style.--secondcolor]="secondColor">
 
-    <button *ngIf="showHandles" type="button" class="nav prev" (click)="btnBack()" title="previous slide">
+    <button *ngIf="showHandles" type="button" class="nav prev" (click)="btnBack()" aria-label="previous slide">
       <svg [attr.fill]="secondColor" class="flip" width="45" height="45" viewBox="0 -960 960 960">
         <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
       </svg>
@@ -15,14 +15,14 @@
 
       <div *ngIf="showIndicators" class="indicators">
         <ng-container *ngFor="let p of items; let i = index">
-          <button *ngIf="i % itemsPerPage === 0" [title]="'go to slide ' + (i + 1)" [attr.index]="i / itemsPerPage" (click)="scrolProduct(i / itemsPerPage)" type="button" class="indicator" [class.active]="currentItem === i / itemsPerPage"></button>
+          <button *ngIf="i % itemsPerPage === 0" [attr.aria-label]="'go to slide ' + (i + 1)" [attr.index]="i / itemsPerPage" (click)="scrolProduct(i / itemsPerPage)" type="button" class="indicator" [class.active]="currentItem === i / itemsPerPage"></button>
         </ng-container>
       </div>
       <div *ngIf="!!interval" class="timer" [class.full]="timer" [style.--interval]="interval + 'ms'"></div>
 
     </div>
 
-    <button *ngIf="showHandles" type="button" class="nav next" (click)="btnNext()" title="next slide">
+    <button *ngIf="showHandles" type="button" class="nav next" (click)="btnNext()" aria-label="next slide">
       <svg [attr.fill]="secondColor" class="flip" width="45" height="45" viewBox="0 -960 960 960">
         <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
       </svg>

@@ -37,20 +37,36 @@
       gap: 6px;
 
       .indicator {
-        width: 15px;
-        height: 15px;
-        background: white;
-        border-radius: 10px;
-        transition-duration: 0.2s;
+        width: 48px;
+        height: 48px;
         outline: none;
-        border-color: var(--secondcolor);
         cursor: pointer;
+        background: none;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:before {
+          content: "";
+          border-color: var(--secondcolor);
+          border-radius: 10px;
+          width: 15px;
+          height: 15px;
+          background: #fff;
+          display: block;
+          transition-duration: .2s;
+          border: 2px solid var(--secondcolor);
+        }
 
         &.active {
-          width: 30px;
-          background-color: var(--mainColor);
           border: none;
           cursor: initial;
+
+          &:before {
+            background-color: var(--mainColor);
+            width: 40px;
+          }
         }
       }
     }
